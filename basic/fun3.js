@@ -48,3 +48,15 @@ function fc2(getarr)
 }
 console.log(fc2(arr))
 console.log(fc2([20,30,40,50]))
+
+console.log(one(5))
+
+function one(n){
+    return n+1
+}
+
+ console.log(two())
+const two=function(){
+    const web='hi'
+}
+
