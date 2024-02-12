@@ -29,6 +29,7 @@ const chai3= () =>{
     console.log(this.uns)
 }
 chai3()
+
 const add= (a,b) =>  {   
     return a+b
 }
@@ -37,9 +38,16 @@ const add2= (a,b) => (a+b)
 const add3= (a,b) => a+b
 console.log(add(5,1))
 console.log(add2(5,1))
-console.log(add3(5,1))
+console.log(add3(5,1));
 
-( function fun4(){
-    console.log(`db connected`)
-} )()
+// (IIFE) immediately invoked function expressions
+(function chai4(){
+    // naned iife
+    console.log(`DB CONNECTED`);
+})(); //  ( ; ) is must for 2 iife
+
+(  (name) => {
+    // un named iife
+    console.log(`${name} DB CONNECTED 2`)
+}) ('ritesh')
 
