@@ -37,4 +37,50 @@ const greet="hello"
  for (const i of greet) {
     console.log(`each char is ${i}`)
  }
- 
+
+const mpp= new Map()
+mpp.set('in','india')
+mpp.set('usa','united')
+mpp.set('fr','france');
+
+for(const [k, v] of mpp)
+{
+    console.log(`${k}:-${v}`)
+}
+const obj = {
+    py:'python',
+    c:'c',
+    cpp:'c++',
+    js:'javascript',
+    java:'java'
+}
+for (const k in obj) {
+    console.log(`${k} s the shortcut of ${obj[k]}`)
+};
+const cd=['js','ruby','python','cpp','c','java']
+cd.forEach(function (value){
+    console.log(value)
+});
+cd.forEach(element => {
+    console.log(element)
+});
+function printme(it)
+{
+    console.log(it)
+}
+cd.forEach(printme)
+const mycd=[
+    {
+        lang:'javascript',
+        file:'.js'
+    },
+    
+    {
+      lang:'c++',
+      file:'.cpp'
+    }   
+]
+mycd.forEach((it)=>
+{
+    console.log(it.lang," :",it.file)
+})
