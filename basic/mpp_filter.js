@@ -1,42 +1,3 @@
-// if 
-const isloggedin=true
-if(3!=2)
-{
-    console.log(`hello 1`)
-}
-if(2=='2')
-{
-    console.log(`hello 2`)
-}
-if(2==='2')
-{
-    console.log(`hello 3`)
-}
-// falsy values : 0,false,-0,BigInt 0n,"",null,undefined,NaN
-// truthy values : "0","false"," ",[],{},function(){}
-
-// nullish coelescing operator (??) : null,undefined
-let val1;
-val1= 5 ?? 10
-val1= null ?? 10
-val1= undefined ?? 15
-val1=null ?? 10 ?? 20
-console.log(`${val1}`)
-
-// cond ? true : false
-const ice =100
- ice >=80 ? console.log(`more than or equal`):console.log(`less than`)
-
- for(let i=0;i<5;i++)
- {
-
- }
-
-const arr = [7,8,9,6]
-const greet="hello"
- for (const i of greet) {
-    console.log(`each char is ${i}`)
- }
 
 const mpp= new Map()
 mpp.set('in','india')
@@ -108,3 +69,52 @@ let u1=mycd.filter( (b)=> b.genre==='history')
 let u2=mycd.filter((bk)=> bk.publish>=1995 && bk.genre ==='history')
 console.log(u1)
 console.log(u2)
+
+const tr = (mynums.map((num)=> num+10 ))
+console.log(tr)
+const newnums3 = mynums
+  .map((num)=> num*10 ) // chaning return 10,20,30
+  .map((n)=> n+1)
+  .filter((n)=> n>=40 );
+
+console.log(newnums3);
+
+// reduce 
+const mn=[1,2,3,4,5]
+
+const tl = mn.reduce(function(acc,cur){
+    console.log(`accumulator:${acc} and current:${cur}`)
+    return acc+cur
+},0)
+console.log(tl)
+
+const ttl = mn.reduce((a,c)=>a+c,0)
+console.log(ttl)
+const  shopping=[
+    {
+        name:"py",
+        price:99
+    },
+    {
+        name:"js",
+        price:199
+    },
+    {
+        name:"cpp",
+        price:299
+    },
+    {
+        name:"dsa",
+        price:1299
+    },
+    {
+        name:"web",
+        price:1999
+    },
+    {
+        name:"java",
+        price:199
+    }
+]
+pay=shopping.reduce((acc,arr)=>acc+arr.price,0)
+console.log(pay)
