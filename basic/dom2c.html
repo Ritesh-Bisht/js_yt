@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document : my javascript</title>
+</head>
+<body style="background-color: black; color: gold;">
+    
+</body>
+<script>
+    const d=document.createElement('div')
+    console.log(d);
+    d.className="main"
+    d.id=Math.round(Math.random()*10)
+    d.setAttribute("title","rb")
+    d.style.backgroundColor="green"
+    d.style.color="orange"
+    d.style.padding="15px"
+    // d.innerText="candc"
+    const add=document.createTextNode("candc")
+    d.appendChild(add)
+
+    document.body.appendChild(d); 
+
+</script>
+</html>

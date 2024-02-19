@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: aliceblue; color: orange">
+    <ul class= "language">
+        <li>JAVASCRIPT</li>
+        <li>PYTHON</li>
+        <li>C++</li>
+        <li>JAVA</li>
+    </ul>
+</body>
+<script>
+    function addl(n) {
+        const list=document.createElement('li')
+        list.innerHTML=`${n}`
+        document.querySelector('.language').appendChild(list)
+    }
+    addl("py")
+    addl("c")
+    
+</script>
+</html>
