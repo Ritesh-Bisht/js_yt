@@ -21,6 +21,22 @@
     }
     addl("py")
     addl("c")
-    
+    function addopt(n){
+        const lis=document.createElement('li')
+        lis.appendChild(document.createTextNode(n))
+        document.querySelector('.language').appendChild(lis)
+    }
+    addopt('golang');
+
+    // edit
+    const sec=document.querySelector('li')
+    console.log(sec)
+   //  sec.innerHTML='mojo'
+    const n=document.createElement('li')
+    console.log(n)
+    n.textContent='mojo'
+    sec.replaceWith(n);
+    n.remove()
+
 </script>
 </html>
