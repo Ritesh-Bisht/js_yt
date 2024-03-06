@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> SHIVA IMAGES </title>
+</head>
+<body id = "BODY" style="background-color: black; color: aliceblue;">
+    <h2> AMAZING IMAGES </h2>
+    <ul id="images" >
+        <li> <img width="100px" id="p1" 
+        src="https://images.pexels.com/photos/3810915/pexels-photo-3810915.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+         alt="p1"> </li>
+
+        <li> <img width="100px" id="p2" 
+            src="https://images.pexels.com/photos/2072577/pexels-photo-2072577.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+             alt="p2"> </li>
+
+        <li> <img width="100px" id="p3" 
+                src="https://images.pexels.com/photos/6556790/pexels-photo-6556790.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt="p3"> </li>
+
+        <li> <img width="100px" id="p4" 
+            src="https://images.pexels.com/photos/4595295/pexels-photo-4595295.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt="p4"> </li>
+
+        <li> <img width="100px" id="p5" 
+            src="https://images.pexels.com/photos/18411177/pexels-photo-18411177/free-photo-of-shiva.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt="p5"> </li>
+
+        <li > <a id="pex" style="color: aqua;" href="ttps://www.pexels.com/search/shiva/" id="s"> pexels </a></li>
+    </ul>
+</body>
+
+<script>
+    // BUBBLING MODE : click =  li-> ul -> body
+    document.getElementById('images').addEventListener('click',function(e){
+     console.log("images clicked (ul)")
+    },false) // false by defalut
+    // attachEvent()
+    // jQuery - on 
+
+    document.getElementById('p1').addEventListener('click',function(e){
+        console.log(" p1 clicked (li)")
+    },false)
+    document.getElementById('BODY').addEventListener('click',function(e){
+        console.log(" BODY clicked (body)")
+    },false)
+     
+    // CAPTURING  MODE : click =  body -> li -> ul 
+    document.getElementById('images').addEventListener('click',function(e){
+     console.log("images clicked (ul)")
+    },true) // false by defalut
+    // attachEvent()
+    // jQuery - on 
+
+    document.getElementById('p1').addEventListener('click',function(e){
+        console.log(" p1 clicked (li)")
+    },true)
+    document.getElementById('BODY').addEventListener('click',function(e){
+        console.log(" BODY clicked (body)")
+    },true)
+     
+/*  document.getElementById('pex').addEventListener('click',function(e){
+     e.preventDefault()
+     e.stopPropagation()
+        console.log("pex clicked (li)")
+    },false)
+*/
+
+
+  document.querySelector('#images').addEventListener
+  ('click', function(e){
+    console.log(e.target.tagName);
+    if(e.target.tagName === 'IMG'){
+        console.log(e.target.id);
+    let rem = e.target.parentNode
+    rem.remove()
+    }
+  })
+</script>
+</html>
