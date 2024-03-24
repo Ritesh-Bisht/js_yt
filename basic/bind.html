@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+</head>
+<body>
+    <button> Button Clicked </button>
+</body>
+<script>
+    class React{
+        constructor(){
+            this.library="React"
+            this.server="http://localhost:300"
+            
+            // Requirement
+            document.querySelector('button')
+            .addEventListener('click', this.handleclick
+            .bind(this))
+        }
+
+        handleclick(){
+           console.log(`Button clicked`)
+           // console.log(this);
+           console.log(this.server)
+         }
+    }
+
+    const app = new React() // without parameters constructor will be called 
+
+    const d = Object.getOwnPropertyDescriptor(Math, "PI")
+    console.log(d);
+    const chai ={
+        name: "ginger",
+        price:250,
+        order : function(){
+            console.log(`chai nhi bani`);
+        }
+    }
+    console.log(chai)
+    console.log(Object.getOwnPropertyDescriptor(chai, "name"));
+    /* Object.defineProperty(chai, 'name', {
+        writable : false,
+        enumerable : false
+    })
+    */
+    console.log(Object.getOwnPropertyDescriptor(chai, "name"));
+
+    for(const[key, val] of Object.entries(chai) ){
+        console.log(`${key} : ${val} `);
+    }
+</script>
+</html>
