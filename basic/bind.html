@@ -48,7 +48,9 @@
     console.log(Object.getOwnPropertyDescriptor(chai, "name"));
 
     for(const[key, val] of Object.entries(chai) ){
+        if( typeof val != 'function')
         console.log(`${key} : ${val} `);
     }
+
 </script>
 </html>
