@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> THIS IS MY Document</title>
+</head>
+<body>
+    <button id="orange" > ORANGE </button>
+    <button id="green" > GREEN </button>
+
+</body>
+<script>
+    function outer(){
+        let name="hot"
+
+        function inner(){
+            console.log("INNER ",name);
+        }
+        function inner2(){
+            console.log("INNER2 ",name);
+
+        }
+        
+       inner()
+       inner2()
+
+    }
+    outer()
+    console.log("TOO OUTER ",name);
+
+    function makefunc(){
+        let x= "XTREMRE"
+        function display(){
+            console.log(`Value : `,x);
+        }
+        return display
+    }
+
+    const m= makefunc()
+    m()
+    
+</script>
+
+<script>
+    function clk(color){
+
+        return function f(){
+        document.body.style.backgroundColor=`${color}`
+        }
+    }
+    document.getElementById("orange").onclick=clk("orange")
+</script>
+</html>
